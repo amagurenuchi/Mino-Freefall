@@ -38,6 +38,8 @@ const SHARED_SFX_ASSETS = [
   ["firework", "sfx/firework.wav"],
   ["garbage", "sfx/garbage.wav"],
   ["gameover", "sfx/gameover.wav"],
+  ["kitaspawn", "sfx/kitaspawn.wav"],
+  ["kitatrip", "sfx/kitatrip.wav"],
 ];
 
 const SHARED_AUDIO_ASSETS = [

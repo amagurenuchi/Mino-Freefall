@@ -151,9 +151,11 @@ class TGM4AsukaMode extends BaseMode {
 
         if (isTetris || isTSpinTriple) {
             gainedKitas += 1;
+            gameScene.playSfx("kitaspawn");
         }
         if (isBravo) {
             gainedKitas += (this.variant === 'hard' ? 1 : 2);
+            gameScene.playSfx("kitaspawn");
         }
 
         this.kitas += gainedKitas;
@@ -214,6 +216,7 @@ class TGM4AsukaMode extends BaseMode {
             if (this.kitas < requiredKitas) {
                 nextLevel = currentSection * 100 + 99;
                 this.asukaTransitionStatus = 'failed';
+                this.gameSceneRef.playSfx("kitatrip");
             } else {
                 this.asukaTransitionStatus = 'achieved';
                 this.sectionsPassed = Math.max(this.sectionsPassed, nextSection);
